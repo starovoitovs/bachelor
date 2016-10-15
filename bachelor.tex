@@ -1,5 +1,5 @@
 \documentclass[11pt, a4paper, german]{article}
-\usepackage{amsmath,amsthm,amssymb,latexsym,amsfonts}
+\usepackage{amsmath,amsthm,amssymb,latexsym,amsfonts,breqn}
 \usepackage[left=3cm,right=3cm,top=2	cm,bottom=2cm]{geometry} % page settings
 \setlength{\parindent}{0mm}
 
@@ -33,11 +33,11 @@
 % z.B.: Prof. Dr. Peter Koepke
 \betreuer{Betreuer: Prof. Dr. Margherita Disertori}
 %Name des Instituts an dem der Betreuer der Arbeit tätig ist.
-\zweitgutachter{Zweitgutachter: Prof. Dr. X Y}
+\zweitgutachter{Zweitgutachter: Prof. Dr. Juan J. L. Velázquez}
 %z.B.: Mathematisches Institut
 \institut{Institute for Applied Mathematics}
 %Titel der Bachelorarbeit
-\title{Extensions of symmetric operators in context of particle interaction}
+\title{Extensions of symmetric operators in the context of point-particle interaction}
 %Do not change!
 \ausarbeitungstyp{Bachelorarbeit Mathematik}
 
@@ -50,6 +50,11 @@
 
 %\clearpage
 
+\begin{abstract}
+In dieser Bachelorarbeit machen wir eine Zusammenfassung der Theorie selbstadjungierter Erweiterungen symmetrischer Operatoren und zeichnen eine spezielle Klasse der Erweiterungen aus: Ter-Martirosian--Skornyakov Erweiterungen. Des Weiteren zeigen wir eine Anwendung dieser Erweiterungen im Kontext von Partikel-Interaktion.\\
+Im ersten Kapitel machen wir eine kurze Wiederholung der Begriffe aus der Quantenmechanik. Im zweiten Kapitel motivieren wir die Nutzung der unbeschränkten Operatoren und beschreiben deren Eigenschaften. Im dritten Kapitel wir wenden uns der Frage der Erweiterungen symmetrischer Operatoren. Im vierten Kapitel wenden wir die Theorie im Kontext  von Partikel-Interaktion an.
+\end{abstract}
+
 \section{Particle kinematics}
 
 Before we dive into theory of symmetric operators and their extensions, we want to describe model of particle physics based on \cite{griffiths}.\\
@@ -57,8 +62,6 @@ Before we dive into theory of symmetric operators and their extensions, we want 
 Unlike in Newtonian mechanics, where state of the system is given by the vectors in Euclidean space $\mathbb{R} ^d$ and physical quantities by functions on this space, states in quantum mechanics are represented by functions in a Hilbert space $\mathcal{H} = L_2(\mathbb{R} ^d)$ and physical quantities by self-adjoint operators on this space. The functions $\Psi \in \mathcal{H}$ are called wave functions.\\
 
 In fact functions that are multiples of one another represent the same quantum state (so basically we could say that the state is represented by an equivalence class of wave functions). It is customary to normalize wave functions so that $\int |\Psi|^2 d^3x=1$. Then wave functions stand for probability amplitude of the state (meaning that $|\Psi |^2$ is probability distribution, i.e. $|\Psi(x,y,z,t)|^2 \, dx \, dy\,dz$ is the probability of finding the the particle in the volume element $dx\,dy\,dz$).\\
-
-@todo: position, momentum, mass, relativistic adjustments (Lorentz transformation), energy, conservation laws.\\
 
 Quantum mechanics postulates that orbital angular momentum $L$ and spin angular momentum $S$ of a particle are given by the formulas:
 \begin{align}
@@ -76,7 +79,7 @@ Particles of half-integer spin are called \textbf{fermions}, particle of integer
 
 An important difference between fermions and bosons is that two identical bosons can occupy the same quantum space, whereas fermions cannot (Pauli exclusion principle). This accounts for the fact that two identical bosons have symmetrical wave function ($\psi(x, y) = \psi(y, x)$) and fermions have antisymmetrical wave function ($\psi(x, y) = -\psi(y, x)$). Therefore, if we assume for two fermionic particles that $x=y$, then $\psi(x,y)=\psi(y,x)=0$, which is consistent with Pauli exclusion principle.\\
 
-\section{Self-adjoint operators}\label{sec:self-adjoint-operators}
+\section{Unbounded operators}\label{sec:self-adjoint-operators}
 
 As mentioned before, physical quantities in quantum mechanics are given by self-adjoint operators. The model described in the previous chapter assumes existence of a well-defined Hamiltonian. However, the Hamiltonian defined in (\ref{eq:general-hamiltonian}) is not necessarily self-adjoint, so in order to get a well-defined problem we have to adjust the operator $H$. This is where extensions of symmetric operators come into play.\\
 
@@ -165,26 +168,21 @@ which implies $\varphi = 0$. Same applies to $-i$. This suggests that $T^*\pm i$
 Important fact is that the spectral theorem holds, which means that self-adjoint operators are multiplication operators up to some unitary transformation.
 
 \begin{theorem}
-@todo spectral theorem
+Let $A$ be a self-adjoint operator on a separable Hilbert space $\mathcal H$ with domain $D(A)$. Then there is a measure space $(M, \mu)$ with a finite measure $\mu$, a unitary operator $U: \mathcal H \rightarrow L^2(M, d\mu)$ and a real-valued function $f$ on $M$ which is finite a.e. so that:
+
+\begin{itemize}
+\item $\psi \in D(A)$ if and only if $f(\cdot)(U\psi)(\cdot)\in L^2(M, d\mu)$;
+\item If $\varphi \in U(D(A))$, then $(UAU^{-1} \varphi)(m) = f(m)\varphi(m)$.
+\end{itemize}
 \end{theorem}
 
 We recall that the time-evolution is a system is determined by the wave function 
 
 \begin{equation}
 \Phi(x,y,z,t) = \phi(x,y,z)\exp(-itH)
-\end{equation}
+\end{equation}\\
 
-The following theorem guarantees that the expression $\exp(-itH)$ makes sense if $H$ is self-adjoint.
-
-\begin{theorem} (Stone's theorem)
-@todo Stone's theorem.
-\end{theorem}
-
-\begin{itemize}
-\item Spectral theorem holds.
-\item Spectrum is a subset of real line.
-\item Self-adjoint operators can be exponentiated ($H\mapsto \exp(-itH)$): compatible with Stone's theorem.
-\end{itemize}
+Another fundamental result is:
 
 \begin{theorem} (Hellinger--Toeplitz)
 Everywhere defined self-adjoint operator is bounded.
@@ -198,17 +196,41 @@ Let $d=1$ and $(T \varphi)(x) := x \varphi (x)$ (position operator). We notice t
 
 \end{example}
 
+The example above suggests that in physics we usually come across unbounded operators, which highlights the importance of the theory of self-adjoint extensions of symmetric operators.
+
 \section{Self-adjoint extensions}\label{sec:self-adjoint-extensions}
+
+The operators that we come across in the context of point-particle interaction are usually unbounded, and in general not self-adjoint. However, observables in quantum mechanics must be given by self-adjoint operators. Therefore we have to look for self-adjoint extensions of the initial operator, each such extension accounts for different behavior of the system.\\
+
+The question of the self-adjointness of an extension usually cannot be answered directly and can depend on:
+
+\begin{itemize}
+\item number of the particles ($N=2, 3, \dots$);
+\item dimension of the space ($d=1,2,3$);
+\item ratio of the masses of the particles;
+\item symmetries of the space:
+\begin{itemize}
+\item bosonic (symmetry) or fermionic (antisymmetry) cases;
+\item translational symmetries;
+\item rotational symmetries.
+\end{itemize}
+\end{itemize}
+
+Each configuration has to be studied separately and the results may vary substantially (for example, there is large difference between the models of 2 and models of 3 particles).\\
+
+There are different approaches that allow us to identify self-adjoint extensions of a symmetric operator. First of all, an extension can be viewed as a perturbation of the initial operator (\textit{free} Hamiltonian). However, this approach has only limited application (for example in case $N=2, d=1$).\\
+
+More complicated configurations make use of more elaborate theories of extensions of symmetric operators. We are going to present the results of two parallel theories that identify self-adjoint extensions of symmetric operators using some auxiliary constructs: Krein-Višik-Birman (KVB) and von Neumann theories of extensions of symmetric operators.
 
 \subsection{Friedrichs extension}
 
 There is a distinguished extension of a semi-bounded operator $T$. As stated above, if a semi-bounded operator has equal deficiency indices, then the operator is essentially self-adjoint. There is a distinguished extension called \textbf{Friedrichs} extension. The existence of this extension will later prove to be very useful when developing KVB theory of self-adjoint extensions. We now want to construct this extension.
 
 \begin{definition}
-Consider $q(\varphi, \psi) := (\varphi, A\psi)$ with $\varphi, \psi \in D(A)$. Then $q$ is a closable quadratic form and its closure $\hat{q}$ is the quadratic form of the unique operator $\hat{A}$. Then $\hat{A}$ is a positive extension of $A$, and the lower bound of its spectrum is the lower bound of $q$ (hence we preserve semi-boundedness). Further, $\hat{A}$ is the only self-adjoint extension of $A$ whose domain is contained in the form domain $\hat{q}$. We call this extension Friedrichs extension.
+Consider $q(\varphi, \psi) := (\varphi, A\psi)$ with $\varphi, \psi \in D(A)$. Then $q$ is a closable quadratic form and its closure $\widehat{q}$ is the quadratic form of the unique operator $\widehat{A}$. Then $\widehat{A}$ is a positive extension of $A$, and the lower bound of its spectrum is the lower bound of $q$ (hence we preserve semi-boundedness). Further, $\widehat{A}$ is the only self-adjoint extension of $A$ whose domain is contained in the form domain $\widehat{q}$. We call this extension Friedrichs extension.
 \end{definition}
 
-As we stated above, two properties of the Friedrichs extension is that we preserve the lower bound and that the domain of $\hat{A}$ is contained in the form domain of $\hat{q}$. Moreover, we have the following result:
+As we stated above, two properties of the Friedrichs extension is that we preserve the lower bound and that the domain of $\widehat{A}$ is contained in the form domain of $\widehat{q}$. Moreover, we have the following result:
 
 \begin{theorem}
 Let $A$ be a symmetric operator which is bounded from below. If the Friedrichs extension is the only self-adjoint extension of $A$ that is bounded from below, then the operator is essentially self-adjoint.
@@ -223,7 +245,7 @@ Let $A$ be strictly positive symmetric operator, i.e. $(A\varphi, \varphi) \geq 
 \begin{itemize}
 \item $A$ is essentially self-adjoint
 \item $\text{Ran}(A)$ is dense
-\item $\ker	(A^*) = 0$
+\item $\ker	A^* = 0$
 \item $A$ has only one semi-bounded self-adjoint extension.
 \end{itemize}
 
@@ -251,7 +273,7 @@ Let $A$ be closed symmetric operator. Then the following holds:
 \end{itemize}
 \end{theorem}
 
-This theorem indicates that $\ker i - A^*$ and $\ker i + A^*$ play an important role. We make the following definitions:
+This theorem indicates that $\ker (i - A^*)$ and $\ker (i + A^*)$ play an important role. We make the following definitions:
 
 \begin{definition}
 $$\mathcal{K}_+:=\ker (i-A^*) = \text{Ran}(i+A)^{\perp}$$
@@ -267,7 +289,7 @@ $$[\varphi, \psi]_A = (A^*\varphi, \psi) - (\varphi, A^*\psi)$$
 
 We call a subspace of $D(A^*)$ $A$-symmetric, if $[\varphi, \psi]_A = 0$ for all $\varphi, \psi$ in the subspace. We also define $A$-closedness and $A$-symmetricity with respect to $(\cdot, \cdot)_A$. The following result holds:
 
-\begin{theorem}
+\begin{theorem}\label{von-neumann-dec}
 Let $A$ be a closed symmetric operator. Then:
 \begin{itemize}
 \item The closed symmetric extensions of $A$ are the restrictions of $A^*$ to $A$-closed, $A$-symmetric subspaces of $D(A^*)$.
@@ -305,76 +327,79 @@ Anti-linear map is called \textbf{conjugation} if it is norm-preserving and $C^2
 If a symmetric operator $A$ commutes with some conjugation $C$, then it has equal deficiency indices and therefore has self-adjoint extensions.
 \end{theorem}
 
-\subsection{Perturbations of self-adjoint operators}
-
-Sometimes we can study the operator $A$ being our free Hamiltonian, and by obtaining its self-adjoint extensions we can consider the total Hamiltonian as the perturbation of the initial Hamiltonian:
-
-\begin{equation}
--\Delta + V(r)
-\end{equation}
-
-Then we can consider the zero-range interaction Hamiltonian as the limiting case of the total Hamiltonian for interaction radius $r \rightarrow 0$.
-
-\subsection{KVB theory of self-adjoint extensions}
+\subsection{KVB (Krein-Višik-Birman) theory of self-adjoint extensions}
 
 We denote with
 
-$$m(S) := \frac{(f, Sf)}{\Vert f \Vert ^2}$$ 
+$$m(S) := \inf _{f\in D(S)\setminus \{0\}}\frac{(f, Sf)}{\Vert f \Vert ^2}$$ 
 
-the bottom of a semi-bounded operator $S$. We assume that $S$ is densely-defined and not necessarily closed, however, as we recall, if the operator is symmetric, it is always closable, so we can always refer to the closure of a given operator. First of all, we notice that the theory does not impose restrictions on the deficiency indices of $S$ ($\dim \ker (S^* \pm i)$), in general they can be infinite. Moreover, via translation we can assume that $m(S) > 0$, so that we can develop theory for strictly positive operators without loss of generality (consider $S + \lambda I$ and correspondingly translate the results on the initial operator). Hence we can assume the existence of the Friedrichs extension $S_F$ with bounded inverse.
+the \textbf{bottom} of a semi-bounded symmetric operator $S$, i.e. its greatest lower bound. We assume that $S$ is densely-defined. We recall that, if the operator is symmetric, it is always closable, so we can always refer to the closure of a given operator. First of all, we notice that the theory does not impose restrictions on the deficiency indices of $S$ ($\dim \ker (S^* \pm i)$), in general they can be infinite. Moreover, via translation we can assume that $m(S) > 0$, so that we can develop theory for strictly positive operators without loss of generality (consider $S_\lambda := S + \lambda I$ and correspondingly translate the results to the initial operator). Hence we can assume the existence of the Friedrichs extension $S_F$ with bounded inverse.\\
 
-As in the von Neumann theory of self-adjoint extensions, we are first of all interested in the definition of $D(S^*)$, i.e. the decomposition with respect to the corresponding auxiliary operators / deficiency spaces. Within the von Neumann theory the following relation holds:
+As in the von Neumann theory of self-adjoint extensions, we are first of all interested in the definition of $D(S^*)$, i.e. the decomposition with respect to the corresponding deficiency spaces. Within the von Neumann theory the following relation holds:
 
-$$D(S^*) = D(S) + \ker(S^*+i) + \ker(S^*-i)$$
+$$D(S^*) = D(S) + \ker(i+S^*) + \ker(i-S^*)$$
 
-i.e. a direct sum of the initial domain and both deficiency spaces, this formula is valid for any densely defined $S$.
+i.e. a direct sum of the initial domain and both deficiency spaces, this formula is valid for any densely defined $S$.\\
 
-Unlike von Neumann theory, the KVB theory works with the real version of the equation above, i.e. we examine $U := \ker(S^*)$ instead of the two deficiency spaces. We refer to $U$ as \textit{the} deficiency space.
+Unlike von Neumann theory, the KVB theory works with the real version of the equation above, i.e. we examine $ \ker S^* $ instead of the two deficiency spaces. We refer to $\ker S^*$ as \textit{the} deficiency space.
 
-\begin{theorem}
-For a densely defined $S$ we have $D(S^*) = D(S_F) + \ker(S^*)$.
-\end{theorem}
+\begin{theorem}\label{kvb-dec}
+For a densely defined $S$ we have: 
 
-\begin{theorem}
-For a densely defined $S$ we have 
-\begin{equation}
-D(S^*) = D(\overline{S}) + S_F^{-1} \ker S^* + \ker S^*
-\end{equation}
-\end{theorem}
-
-Hence the study of $\ker S^*$ is of essential importance in construction of $D(S^*)$.
-
-The approach is to associate to the subspace $ker S^*$ a self-adjoint operator $B$ which will help to label the self-adjoint extensions of the initial operator $S$.
-
-Now we want to study an arbitrary self-adjoint extension $\tilde{S}$ of $S$ and "reverse-engineer" the extension using the operator $B$ mentioned above, which we are going to construct below. We define the following subspaces (notice that we use direct sum with respect to the compliment space, i.e. $\mathcal{H}$ if not stated otherwise:
-
-$$U_0 := \ker \tilde{S}$$
-
-$$U := U_0 \oplus U_1$$
-
-$$\mathcal{H}_+ := \overline{\text{Ran} S} \oplus U_1$$
-
-After introduction of several auxiliary operators we can use the following central theorem of the theory:
-
-\begin{theorem}
-\begin{equation}
-D(\tilde{S}) = D(\overline{S}) + (S_F^{-1} + B) \tilde{U}^1 + U_0
-\end{equation}
-
-where $B$ is the unique operator associated with the extension $\tilde{S}$.
+\begin{align}
+D(S^*) &= D(S_F) + \ker S^*\\
+D(S^*) &= D(\overline S) + S_F^{-1} \ker S^* + \ker S^*\\
+D(S_F) &= D(\overline S) + S_F^{-1} \ker S^*
+\end{align}
 
 \end{theorem}
 
-Another fundamental result is that the theory is self-sufficient, i.e. the variety of the possible $B$-decompositions of the self-adjoint extensions $\tilde{S}$ classifies all self-adjoint extensions of $S$, i.e. there is a one-to-one correspondence between the self-adjoint extensions $\{\tilde{S}\}$ and the self-adjoint operators on Hilbert subspaces of $\ker S^*$, $S_B \leftrightarrow B$,
+The following theorem classifies self-adjoint extensions of a given operator:
 
-\begin{equation}
-S_B = S^* | D(S_B),
-D(S_B) = D(\overline{S}) + (S_F^{-1} + B) \tilde{U}_1 + U_0
-\end{equation}
+\begin{theorem}\label{kvb-main}
+Let $S$ be a densely-defined symmetric operator with positive bottom. There is one-to-one correspondence between the family of all self-adjoint extensions of $S$ and the family of the self-adjoint operators on Hilbert subspaces of $\ker S^*$. If $T$ is any such operator, in the correspondence $T \leftrightarrow S_T$ each self-adjoint extension $S_T$ of $S$ is given by
 
-The theory also allows to make a statement about the bound of the operator $S_B$ based on the "bottom" $m(S)$.
+\begin{align}
+S_T &= S^* \upharpoonright D(S_T) \\
+D(S_T) &= \left\{ f + S_F^{-1} (Tv + w) = v \middle| f\in D(\overline S), v \in D(T), w \in \ker S^* \cap D(T)^{\perp} \right\}
+\end{align}
 
-The Friedrichs extension $S_F$ and the minimal extension $S_N$ are also uniquely identified by the specific choice of the subspaces above. The theory also makes the connection to the von Neumann's theory of deficiency indices and makes statements about semi-boundedness, invertability of generic operators and their spectrum (not necessarily strictly positive / semi-bounded operators).
+\end{theorem}
+
+KVB theory also allows to make a statement about the bound of the bottom of a self-adjoint extension based on the bottom of the initial operator.
+
+\begin{theorem}\label{kvb-est}
+Let $S$ be a densely defined symmetric operator with positive bottom. If $S_T$ is a self-adjoint extension of $S$ and if $\alpha < m(S)$, then the following are equivalent:
+
+\begin{align}
+(g, S_T g) &\geq \alpha \Vert g \Vert ^2 \,\,\,\,\,\forall g \in D(T)\\
+(v, Tv) &\geq \alpha \Vert v \Vert ^2 + \alpha ^2 (v, S_F-\alpha I ) ^{-1} v) \,\,\,\,\, \forall v \in D(T)
+\end{align}
+
+It follows that $m(T)\geq m(S_T)$ for any semi-bounded $S_T$. In particular:
+
+\begin{align}
+m(S_T)\geq 0 \,\Leftrightarrow\, m(T) \geq 0 \\
+m(S_T)> 0 \,\Leftrightarrow\, m(T) > 0
+\end{align}
+
+\end{theorem}
+
+The Friedrichs extension $S_F$ is uniquely identified by specific choice of the operator $T$:
+
+\begin{theorem}
+Let $S$ be a densely-defined symmetric operator with positive bottom and let $S_T$ be a positive self-adjoint extension of $S$ parametrised by $T$. Then $S_T$ is the Friedrichs extension when $D(T)=\{0\}$.
+\end{theorem}
+
+As we mentioned before, KVB theory allows for the deficiency index $\dim \ker S^*$ to be infinite. In case $\dim\ker S^* < \infty$, the situation is somewhat simpler:
+
+\begin{theorem}
+Let $S$ be a densely-defined symmetric operator with positive bottom and finite deficiency index ($\dim\ker S^*< \infty$). Then:
+\begin{itemize}
+\item the semi-boundedness of $S_T$ is equivalent to the semi-boundedness of $T$;
+\item any self-adjoint extension of $S$ is bounded from below.
+\end{itemize}
+\end{theorem}
 
 \section{Extensions of symmetric operators in the context of particle interaction}
 
@@ -388,11 +413,9 @@ The principal foundation for non-relativistic quantum mechanics is Schrödinger 
 \frac{1}{2m} p^2 + V = E
 \end{equation}
 
-State in which the energy has definite values are called \textbf{stationary states} of a system. The stationary state with the smallest possible value of the energy is called \textbf{ground state}.
+State in which the energy has definite values are called \textbf{stationary states} of a system. The stationary state with the smallest possible value of the energy is called \textbf{ground state}.\\
 
-In quantum mechanics the momentum operator is $p = i\hbar\nabla$ and the energy operator is $E = i\hbar \frac{\partial}{\partial t}$.\\
-
-So the expression above can be rewritten as 
+The expression above can be rewritten as 
 
 \begin{equation} \label{eq:schroedinger}
 \left(- \frac{\hbar^2}{2m}\Delta + V\right)\Psi = i\hbar \frac{\partial}{\partial t} \Psi
@@ -467,11 +490,13 @@ The equation (\ref{eq:R}) can be simplified by setting $u(r) := r R(r)$ which tr
 
 At this point the strategy is to solve (\ref{eq:radial-schroedinger-equation}) for particular potential $V(r)$ and combine the result with appropriate spherical harmonic to get the full wave function.
 
-@todo for most values of $E$ the solution blows up at large $r$ and yields a non-normalizable wave function. Such solution does not represent a possible physical state. So a bound system cannot have just any old energy, but can take energy on only certain specific values, the so-called 'allowed energies' of the system. Our real concern is not with the wave function itself, but with the spectrum of allowed energies.\\
+\begin{remark}
+For most values of $E$ the solution blows up at large $r$ and yields a non-normalizable wave function. Such solution does not represent a possible physical state. So a bound system cannot have just any old energy, but can take energy on only certain specific values, the so-called \textit{allowed energies} of the system. Our real concern is not with the wave function itself, but with the spectrum of allowed energies.
+\end{remark}
 
 \subsection{Derivation of the zero-range potential as the limiting case}
 
-In this section we introduce zero-range interaction model for the particle interaction and give mathematical derivation of the potential and behavior of the wave function in the vicinity of the hyperplanes, as in Bethe-Peierls model. It is noted that zero-range interaction is an extremely good approximation of the non-relativistiv ultra-cold atom systems, where the effective range of the interaction shrinks to a very small scale \cite{A2}.\\
+Early developments in the nuclear physics suggested that the nuclear forces interaction must be of very short range and very strong magnitude, which led to the development of the zero-range interaction model. Zero-range interaction is an extremely good approximation of the non-relativistic ultra-cold atom systems, where the effective range of the interaction shrinks to a very small scale \cite{A2}. Here we present motivation behind the model and give mathematical derivation of the potential and behavior of the wave function in the vicinity of the hyperplanes, as presented in \cite{zero-range-potentials}.\\
 
 We denote with $b>0$ the radius of the square-well potential and denote it's energy by $U_0$. Without loss of generality we assume that the potential is centered at the origin, otherwise we can use the Jacobi coordinates ($r \rightarrow r - R$ for the potential centered at $R$). We want to study the system as $b\rightarrow 0$.\\
 
@@ -539,17 +564,15 @@ is necessary. Hence in the vicinity of 0 the wave function takes the form:
 
 So we see that zero-range interaction accounts for specific behavior of the wave function near the singularity, i.e. as $r\rightarrow 0$. In the case of several particle interaction we will generalize zero-range interaction by requiring analogous asymptotics near the coincidence hyperplanes, i.e. as $\vert x_i - x_j \vert \rightarrow 0$, for some particle couples $i, j$. Asymptotics of this sort is referred to as the \textbf{TMS condition} \cite{A2}.\\
 
-Noticeably, such asymptotics arise both from physical heuristics for an "effective" low-energy two-body scattering due to an interaction of very short range (as demonstrated above) and from the theory of self-adjoint extensions of symmetric operators, one of the facts that demonstrates strong connection between both radically different approaches.\\
-
-@todo $U_0 = 1/b^2$, perturbation $E_0\rightarrow E$.
+Noticeably, such asymptotics arise both from physical heuristics for an \textit{effective} low-energy two-body scattering due to an interaction of very short range (as demonstrated above) and from the theory of self-adjoint extensions of symmetric operators, one of the facts that demonstrates strong connection between both radically different approaches.\\
 
 \subsection{Ter-Martirosyan--Skornyakov extensions}
 
-Ter-Martirosyan--Skornyakov (TMS) Hamiltonians are a specific class of extensions of the free Hamiltonian which we will construct in this section.
+Ter-Martirosyan--Skornyakov (TMS) Hamiltonians are a specific class of extensions of the free Hamiltonian which we will construct in this section.\\
 
-Initially Ter-Martirosyan and Skoryankov exploited the ideas behind Bethe-Peierls model to derive the integral equation, the solution of which defines the wave functions. The equation relied only on the scattering lengths in each two-body channel.\\
+Initially Ter-Martirosyan and Skoryankov exploited the ideas behind Bethe-Peierls theory of deuteron (in particular considering the boundary condition (\ref{eq:bc}) and the potential $U_0 (r) = -(4\pi\hbar ^2 / M)r \delta(r)$ in the Schrödinger equation, which stood for the depth of the well) to derive the integral equation, the solution of which defines the wave functions for the case of three particles. The model is thus parametrized by a single set of parameters $\alpha_{ij}$ as in (\ref{eq:bc}), which corresponds to the scattering lengths in the two-body channel. Following the same approach, similar integral equations were derived for other models with different particle number and symmetries.\\
 
-However, the equation had solutions for arbitrary values of $-E < 0$. Then the parametrization of the solution was proposed by Danilov, which led to a discrete infinite set of eigenvalues and a family of self-adjoint extensions parametrized by $\{\varepsilon \in \mathbb R\}$, by the way yielding quantitative manifestation of Thomas effect.\\
+However, the original equation had solutions for arbitrary values of $-E < 0$. Then the parametrization of the solution was proposed by Danilov, which led to a discrete infinite set of eigenvalues and a family of self-adjoint extensions parametrized by $\{\varepsilon \in \mathbb R\}$, by the way yielding quantitative manifestation of Thomas effect.\\
 
 Minlos and Faddeev proposed the alternative explanation of the parametrization above by placing the problem in the framework of self-adjoint extensions of semi-bounded symmetric operators. Nowadays TMS Hamiltions represent the modern operator-theoretical approach to multi-particle systems with two-body zero-range interaction.\\
 
@@ -587,10 +610,10 @@ We observe that such Hamiltonian is
 \begin{itemize}
 \item densely defined (since coincidence planes are null sets);
 \item symmetric (with partial integration);
-\item positive (since $\int u(-\Delta u) \text{dx} = \int \vert Du \vert ^2 \text{dx} $);
+\item positive (since Green's formula yields $\int u(-\Delta u) \text{dx} = \int \vert Du \vert ^2 \text{dx} $);
 \end{itemize}
 
-so such Hamiltonian satisfies requirements of both KVB and von Neumann theory presented in the Section \ref{sec:self-adjoint-extensions}.
+so such Hamiltonian satisfies requirements of von Neumann theory and, if bounded from below, KVB theory presented in the Section \ref{sec:self-adjoint-extensions}, so the study of such Hamiltonian with the frameworks% of these theories can be carried out.
 
 \item 
 
@@ -602,56 +625,195 @@ H_0\subset H \subset H^* \subset H_0^*
 
 Thus we first characterize $D(H_0^*)$ and then we look for special class of its restrictions based on the TMS condition.
 
-@todo rewrite from A2, p.3.
+By analogy with (\ref{eq:tms-condition}) we can rewrite the TMS condition as:
+
+\begin{equation}
+\Psi(x_1, \dots, x_N) \approx \left( \frac{1}{|x_i - x_j|} - \frac{1}{a_{ij}} \right)
+\end{equation}
+
+where $a_{ij}$ stands for scattering length of the interaction with zero range in the $(i,j)$-channel.
 
 \item
 
-After singling out the class of physical extensions labelled $H_\alpha$ by $a=(-a_{ij}^{-1})_{ij}$ we check the extensions for self-adjointness or identify their self-adjoint extensions, and then study their spectral and stability properties.
+After singling out the class of physical extensions labeled $H_\alpha$ by $a=(-a_{ij}^{-1})_{ij}$ we check the extensions for self-adjointness or identify their self-adjoint extensions, and then study their spectral and stability properties.
 
 \end{enumerate}
 
 The last item contains the main problem of checking self-adjointness of extensions. We notice that usually one proceeds by simplifying the problem by reducing it to the equivalent question about self-adjointness of some auxiliary operator (for example, by separating center of mass or by breaking down the operator into trivially self-adjoint and remaining parts, with the latter to be investigated).
 
-\subsection{Operator-theoretic approach}
+\subsection{Two-body point-particle interaction within the KVB theory}
 
-\subsection{Quadratic-forms-based approach}
+First of all, we observe that we remove the center of mass, i.e. $x:= x_2-x_1$, since the relative part is the one that describes the particle interaction. We notice that in this case the particle interaction is only supported at $x=0$, i.e. whenever $x_2-x_1 = 0$.\\
 
-\subsection{Separation of CM}
+Our starting operators are:
 
-First of all, we have to notice that factor of the Hilbert space that correspond to the fermions is $ L ^{2} _{\text{asym} } \left( \mathbb{R}^{6} \right) $, so that we get $ \psi \left( x _{1} , x _{2} \right) = - \psi \left( x _{2} , x _{1} \right) $. This yields that $ \psi \left( x_1, x_1 \right) =0 $, i.e. two particles can't be at the same place simultaneously, while still preserving modulus squared (accounting for the fact that the particles are indistinguishable).
+\begin{equation}
+H_0 = -\Delta; \,\,\,\,\, D(H_0) = H^2_0(\mathbb R ^3 \setminus \{0\}),
+\end{equation}
 
-Hamiltonian
-$ H _{0} = - \frac{1}{2} \left( \frac{1}{m} \Delta _{y} + \Delta _{x _{1} } + \Delta _{x _{2} } \right) $ (why?).
+where $H^2_0$ denotes the local version of the Sobolev space $H^2$. We know that the Laplacian is a symmetric operator, so we can proceed with the results from the previous chapter.
+
+\begin{remark}
+Different papers related to the topic begin the analysis with different spaces, be it the Sobolev space ($H^2_0$), space of infinitely differentiable functions with compact support ($C^\infty_0$) or the Schwartz space of rapidly decreasing functions. However, closures of these spaces with respect to $\Vert \cdot \Vert _{H^2}$ are equal, for example:
+
+\begin{equation}
+H^2_0(\mathbb R ^3 \setminus \{0\}) = \overline{C_0^\infty(\mathbb R ^3 \setminus \{0\})} ^ {\Vert \cdot \Vert _{H^2}}
+\end{equation}
+
+So we can start by defining the free Hamiltonian on any of these spaces, and then consider the closure of this operator under $\Vert \cdot \Vert _{H^2}$ (we recall that symmetric operators are closable). Hence the initial setups are equivalent.
+\end{remark}
+
+We notice that the requirements for KVB theory to be applicable to the operator $H_0$ are trivially met, as pointed out in previous chapter. We follow analysis of self-adjoint extensions from \cite{A2} to illustrate the application of the KVB theory in this context, elaborate proofs can be found in the paper. For convenience we will operate in the Fourier transform.\\
+
+We recall that KVB theory requires us to explicitly calculate the Friedrichs extension of the initial operator, which will in turn allow us to calculate the domain of the adjoint of the operator.
+
+\begin{theorem}
+For the operator $H_0$ as given we have:
+
+\begin{align}
+D(H_0) &=\left\{f\in H^2(\mathbb R ^3) \middle| \int_{\mathbb R ^3} \widehat{f} (p) \text{dp} = 0 \right\}\\
+\widehat{H_0 f}(p) &= p^2\widehat{f}(p)
+\end{align}
+\begin{align}
+D(H_F) &=H^2(\mathbb R^3)\\
+\widehat{H_F f}(p) &= p^2\widehat{f}(p)
+\end{align}\\
+
+where $H_F$ denotes the Friedrichs extension of $H_0$.
+
+\end{theorem}
+
+The part of the theorem related to the Friedrichs theorem makes use of the fact that it is the only self-adjoint extension whose domain is contained in the form domain of the initial operator (we can consider this a criterion for an extension to be Friedrichs).\\
+
+For the analysis we also need to know $\ker (H^*_0 + \lambda I)$:
+
+\begin{theorem}
+For $\lambda > 0$ we have:
+\begin{equation}
+\ker (H^*_0 + \lambda I) = \left\{ u_\zeta \in L^2(\mathbb R^3) \text{ of the form } \widehat{u}_\zeta (p) = \dfrac{\zeta}{p^2+\lambda} \middle| \zeta \in \mathbb C \right\}
+\end{equation}
+\end{theorem}
+
+We recall that according to the Theorem \ref{kvb-main} self-adjoint extensions of the operator $H_0$ are in one-to-one correspondence with the self-adjoint operators on Hilbert subspaces of $\ker (H^*_0 + \lambda I)$. The fact that the deficiency space is one-dimensional substantially simplifies the situation. In fact, there are no non-trivial subspaces (only $\{0\}$ and $\ker (H^*_0 + \lambda I)$ itself), and the only self-adjoint maps on the whole space are given by multiplication with $\tau in \mathbb R$, i.e. $T_\tau: u_\zeta \mapsto \tau u _\zeta$, which will account for the family of the self-adjoint extensions.\\
+
+Now in order to determine $D(H^*_0)$ we make use of the Theorem \ref{kvb-dec}:
+
+\begin{theorem}
+Adjoint of the operator $H_0$ as above is given by:
+\begin{align*}
+D(H_0^*) &= \left\{g\in L^2(\mathbb R ^3) \middle| \widehat g (p) = \widehat f (p) + \dfrac{\eta}{(p^2+\lambda)^2} + \dfrac{\zeta}{p^2 + \lambda}; \,\,\,\,\, f \in D(H_0); \,\,\,\,\, \eta, \zeta \in \mathbb C\right\}\\
+\widehat{H_0^* h}(p) &= p^2\widehat g(p) - \zeta
+\end{align*}
+\end{theorem}
+
+Now with the main Theorem \ref{kvb-main} we can identify the whole family of self-adjoint extensions of $H_0$:
+
+\begin{theorem}
+The self-adjoint extensions of the operator $H_0$ are given by the family $\{H_0^{(\tau)}|\tau \in \mathbb R \cup \{\infty\}\}$, where $H_0^{(\infty)}$ is the Friedrichs extension and
+
+\begin{align*}
+D(H^{(\tau)}_0)&=\left\{g \in L^2(\mathbb R ^3) \middle| \widehat g (p) = \widehat f (p) + \dfrac{\tau \zeta}{(p^2+\lambda)^2} + \dfrac{\zeta}{p^2 + \lambda}; \,\,\,\,\, \zeta \in \mathbb C; \,\,\,\,\, f \in D(H_0)\right\}\\
+\widehat{H^{(\tau)}_0 g}(p) &= p^2\widehat g (p) - \zeta
+\end{align*}
+\end{theorem}
+
+The estimate in the Theorem \ref{kvb-est} allows us to make a statement about the bottom of an extension:
+
+\begin{theorem}
+Each extension $H^{(\tau)}_0$ is semi-bounded from below. Moreover:
+\begin{align}
+m(H^{(\tau)}_0) \geq 0 \Leftrightarrow \tau \geq 0 \\
+m(H^{(\tau)}_0) > 0 \Leftrightarrow \tau > 0
+\end{align}\\
+\end{theorem}
+
+\begin{remark}
+To obtain the family of the self-adjoint extensions, we made use of the KVB theory. Alternatively we could have used von Neumann theory presented in Chapter \ref{sec:self-adjoint-extensions}. Equivalent result is obtained in \cite{solvable-models} Chapter I.1.
+\end{remark}
+
+\subsection{TMS Hamiltonians for the three-body problem}
+
+We saw that the three body problem can be treated comparatively easy using the tools from Chapter \ref{sec:self-adjoint-extensions}. The problem that we encounter in the three-body case is that the TMS condition is not self-adjointness condition, hence we have to study self-adjoint extension of the resulting TMS Hamiltonian.\\
+
+Historically the case that drew the most attention was \textit{2+1 fermionic system}, i.e. two indistinguishable fermions and another particle of different nature.\\
+
+First of all, we notice that factor of the Hilbert space that corresponds to the fermions is $ L ^{2} _{\text{asym} } \left( \mathbb{R}^{6} \right) $, so that we get $ \psi \left( x _{1} , x _{2} \right) = - \psi \left( x _{2} , x _{1} \right) $. This yields that $ \psi \left( x_1, x_1 \right) =0 $, i.e. two particles can't be at the same place simultaneously, while still preserving modulus squared (accounting for the fact that the particles are indistinguishable).\\
+
+Hamiltonian of the system in position coordinates is:
+\begin{equation}
+H _{0} = - \frac{1}{2} \left( \frac{1}{m} \Delta _{y} + \Delta _{x _{1} } + \Delta _{x _{2} } \right)
+\end{equation}
 
 After applying Fourier transform, we notice that:
 
-$ \mathcal{F} H _{0} \mathcal{F} ^{-1} \left( \phi \left( q, k _{1} , k _{2} \right) \right) = \left( \frac{1}{m} \left| q \right| ^{2} + \left| k _{1} \right| ^{2} + \left| k _{2} \right| ^{2} \right) \left( \phi \left( q, k _{1} , k _{2} \right) \right) $.
+\begin{equation}
+\mathcal{F} H _{0} \mathcal{F} ^{-1} \left( \phi \left( q, k _{1} , k _{2} \right) \right) = \left( \frac{1}{m} \left| q \right| ^{2} + \left| k _{1} \right| ^{2} + \left| k _{2} \right| ^{2} \right) \left( \phi \left( q, k _{1} , k _{2} \right) \right)
+\end{equation}
 
-Change of coordinates
-After Fourier transformation (going to momentum space) we make the change of coordinates:
+In particular we see that operating in Fourier transform allows us to deal with multiplication operator instead of differential operator, which is more convenient.\\
 
-$ P = q+k _{1} + k _{2} ; \,\,\,\, p _{j} = \frac{P }{m+2} - k _{j} $
+After Fourier transform (going to momentum space) we make the change of coordinates:
+
+\begin{equation}
+P = q+k _{1} + k _{2}; \,\,\,\,\, p _{j} = \frac{P }{m+2} - k _{j}
+\end{equation}
 
 Corresponding matrices are:
 
-$ U = \left( \begin{array}{ccc} 1 & 1 & 1 \\ \tfrac{1}{m+2} & \tfrac{1}{m+2} -1 & \tfrac{1}{m+2} \\ \tfrac{1}{m+2} & \tfrac{1}{m+2} & \tfrac{1}{m+2} -1 \end{array} \right) ; \,\,\,\, U ^{-1} = \left( \begin{array}{ccc} 1 - \tfrac{2}{m+2} & 1 & 1 \\ \tfrac{1}{m+2} & -1 & 0 \\ \tfrac{1}{m+2} & 0 & -1 \end{array} \right) $
+\begin{equation}
+U = \left( \begin{matrix} 1 & 1 & 1 \\[10pt] \dfrac{1}{m+2} & \dfrac{1}{m+2} -1 & \dfrac{1}{m+2} \\[10pt] \dfrac{1}{m+2} & \dfrac{1}{m+2} & \dfrac{1}{m+2} -1 \end{matrix} \right) \,\,\,\, U ^{-1} = \left( \begin{array}{ccc} 1 - \dfrac{2}{m+2} & 1 & 1 \\[10pt] \dfrac{1}{m+2} & -1 & 0 \\[10pt] \dfrac{1}{m+2} & 0 & -1 \end{array} \right) 
+\end{equation}\\
 
 So we get:
 
-$ \left\{\begin{array}{rcl} q & = & (1 - \frac{2}{m+2} ) P + p _{1} + p _{2} \\ k _{1} & = & \frac{P}{m+2} - p _{1} \\ k _{2} &=& \frac{P}{m+2} - p _{2} \end{array}\right\} $
+\begin{align}
+q      &= \left(1 - \frac{2}{m+2} \right) P + p _{1} + p _{2} \\
+k _{1} &= \frac{P}{m+2} - p _{1} \\
+k _{2} &= \frac{P}{m+2} - p _{2}
+\end{align}
 
 which yields:
 
-$ \tfrac{1}{m} \left| q \right| ^{2} + \left| k _{1} \right| ^{2} + \left| k _{2} \right| ^{2} = \\ \tfrac{P ^{2} }{m} - \tfrac{4 P ^{2} }{m \left( m+2 \right) } + \tfrac{4 P ^{2} }{m \left( m+2 \right) ^2 } + \tfrac{2 P ^2 }{\left( m+2 \right) ^2 } + \tfrac{2 P p _{1} }{m} - \tfrac{4 P p _{1} }{m \left( m+2 \right) } - \tfrac{2 P p _{1} }{m+2} + \tfrac{2 P p _{2} }{m} - \tfrac{4 P p _{2} }{m \left( m+2 \right) } - \tfrac{2 P p _{2} }{m+2} + \tfrac{p _{1} ^2 }{m} + \tfrac{2 \left( p _{1} , p _{2} \right) }{m} + \tfrac{p _{2} ^2 }{m} + p _{1} ^2 + p _{2} ^2 = \\ \tfrac{P ^{2} }{m} - \tfrac{4 P ^{2} }{m \left( m+2 \right) } + \tfrac{4 P ^{2} }{m \left( m+2 \right) ^2 } + \tfrac{2 P ^2 }{\left( m+2 \right) ^2 } + \tfrac{p _{1} ^2 }{m} + \tfrac{2 \left( p _{1} , p _{2} \right) }{m} + \tfrac{p _{2} ^2 }{m} + p _{1} ^2 + p _{2} ^2 = \\ \frac{P ^{2} }{m+2} + \frac{m+1}{m} \left( p _{1} ^2 + p _{2} ^2 + \frac{2}{m+1} \left( p _{1} , p _{2} \right) \right) . $
+\begin{align*}
+\dfrac{1}{m} \left| q \right| ^{2} + \left| k _{1} \right| ^{2} + \left| k _{2} \right| ^{2} &=
+\dfrac{P ^{2} }{m} - \dfrac{4 P ^{2} }{m \left( m+2 \right) } + \dfrac{4 P ^{2} }{m \left( m+2 \right) ^2 } + \dfrac{2 P ^2 }{\left( m+2 \right) ^2 } \\&+ \dfrac{2 P p _{1} }{m} - \dfrac{4 P p _{1} }{m \left( m+2 \right) } - \dfrac{2 P p _{1} }{m+2} + \dfrac{2 P p _{2} }{m} - \dfrac{4 P p _{2} }{m \left( m+2 \right) } - \dfrac{2 P p _{2} }{m+2} + \dfrac{p _{1} ^2 }{m} \\&+ \dfrac{2 \left( p _{1} , p _{2} \right) }{m} + \dfrac{p _{2} ^2 }{m} + p _{1} ^2 + p _{2} ^2 \\&= \dfrac{P ^{2} }{m} - \dfrac{4 P ^{2} }{m \left( m+2 \right) } + \dfrac{4 P ^{2} }{m \left( m+2 \right) ^2 } + \dfrac{2 P ^2 }{\left( m+2 \right) ^2 } + \dfrac{p _{1} ^2 }{m} + \dfrac{2 \left( p _{1} , p _{2} \right) }{m} \\&+ \dfrac{p _{2} ^2 }{m} + p _{1} ^2 + p _{2} ^2 \\&= \frac{P ^{2} }{m+2} + \frac{m+1}{m} \left( p _{1} ^2 + p _{2} ^2 + \frac{2}{m+1} \left( p _{1} , p _{2} \right) \right)
+\end{align*}\\
 
+Hence we can write: 
+\begin{align}
+\widetilde{H _{0} } &= \mathcal{F} H _{0} \mathcal{F}^{-1} = \widetilde{H _{0} } ^{\left( 1 \right) } + \frac{m}{m+1} \widetilde{H _{0} } ^{\left( 2 \right) }\\
+\left( \widetilde{H _{0} } ^{\left( 1 \right) } f \right) \left( P \right) &= \frac{P ^{2} }{m+2} f \left( P \right)\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,f\in L _{2} \left( \mathbb{R}^{3} \right)\\
+\widetilde{H _{0} } ^{\left( 2 \right) } \left( p _{1} , p _{2} \right) &= G \left( p _{1} , p _{2} \right) g \left( p _{1} , p _{2} \right) \,\,\,\,\,\,\,\,\,\,\,\,g \in L _{2} ^{\text{asym} } \left( \mathbb{R}^{3} \times \mathbb{R}^{3} \right)\\
+G \left( p _{1} , p _{2} \right) &= p _{1} ^2 + p _{2} ^2 + \frac{2}{m+1} \left( p _{1} , p _{2} \right) \\
+\end{align}
 
-Hence we can write $ \widetilde{H _{0} } = \mathcal{F} H _{0} \mathcal{F}^{-1} = \widetilde{H _{0} } ^{\left( 1 \right) } + \frac{m}{m+1} \widetilde{H _{0} } ^{\left( 2 \right) } $ with
+provided
 
-$ \left( \widetilde{H _{0} } ^{\left( 1 \right) } f \right) \left( P \right) = \frac{P ^{2} }{m+2} f \left( P \right) $ for $ f \in L _{2} \left( \mathbb{R}^{3} \right) $
+\begin{equation*}
+\int_{\mathbb{R}^{3} } g \left( p _{1} , p _{2} \right) dp _{j} = 0
+\end{equation*}
 
-and
+Therefore we can reduce the analysis to the study of the operator $\widetilde{H _{0} } ^{\left( 2 \right) } $, since $\widetilde{H _{0} } ^{\left( 1 \right) } $ is a self-adjoint operator in $L_2(\mathbb R^3)$. Following the calculations in \cite{B3} (which make use of von Neumann theory of extensions of symmetric operators), we observe that the operator $\widetilde{H _{0} } ^{\left( 2 \right)}$ is symmetric and:
 
-$ \widetilde{H _{0} } ^{\left( 2 \right) } \left( p _{1} , p _{2} \right) = G \left( p _{1} , p _{2} \right) g \left( p _{1} , p _{2} \right) $ with $ G \left( p _{1} , p _{2} \right) = p _{1} ^2 + p _{2} ^2 + \frac{2}{m+1} \left( p _{1} , p _{2} \right) $ for $ g \in L _{2} ^{\text{asym} } \left( \mathbb{R}^{3} \times \mathbb{R}^{3} \right) $ s.t. $ \int_{\mathbb{R}^{3} } g \left( p _{1} , p _{2} \right) dp _{j} = 0. $
+\begin{equation}
+D(\widetilde{H _{0} } ^{\left( 2 \right)}) = \left\{g \in L_2^{\text{asym}}(\mathbb R ^3 \times \mathbb R ^3 )\middle| \int _{\mathbb R ^3 }g (p_1, p_2) d p_j, j = 1,2\right\}
+\end{equation}
+
+Explicit calculation of the deficiency spaces allows to make use of Theorem \ref{von-neumann-dec} in order to determine the domain and the action of the adjoint. The problem that arises in the three-body problem is that we have wave functions that are zero on the coincidence hyperplanes, therefore an important step in \cite{B3} is to model zero-range interaction by using the domain of the functions that satisfy TMS condition in the vicinity of the coincidence hyperplanes (as opposed to the two-body case, where singularity is in a single point at the origin). It is also demonstrated in \cite{B3} that the problem can be reduced to the study of some auxiliary operator $T$, which in turn can be decomposed into a countable set of operators $M_l$ acting on the domains:
+
+\begin{equation}
+D(M_l) = \left\{u\in L_2(\mathbb R_+, r^2 \text{dr})\middle| r u(r) \in L_2(\mathbb R_+, r^2 \text{dr})\right\}
+\end{equation}
+
+which are operators on a half-line (spherical part of the decomposition of $L_2(\mathbb R^3)$ was factored out).\\
+
+It should be noted that the three-body problem was also elaborated in \cite{A2} (which we used to depict usage of KVB theory within two-body problem).
+
+\section{Concluding remarks}
+
+We summarized modern methods of the theory of extensions of symmetric operators, motivated the use of the zero-range potentials in the context of point-particle interaction and showed some examples which demonstrated applications to Hamiltonians of systems of several particles.\\
+
+It should be noted that the analysis can differ drastically depending on the configuration of the system. For an in-depth historical reference of the development of the theory refer to \cite{A2}.
 
 \medskip
 
@@ -662,16 +824,12 @@ Griffiths, David. \textit{Introduction to Elementary Particles. WILEYVCH.} (2008
 Michelangeli, Alessandro. \textit{Krein-Vishik-Birman self-adjoint extension theory revisited.} (2015).
 \bibitem{A2}
 Michelangeli, Alessandro, and Andrea Ottolini. \textit{On point interactions realised as Ter-Martirosyan-Skornyakov Hamiltonians.} arXiv preprint arXiv:1606.05222 (2016).
-\bibitem{A3}
-Correggi, Michele, et al. \textit{A class of Hamiltonians for a three-particle fermionic system at unitarity.} Mathematical Physics, Analysis and Geometry 18.1 (2015): 1-36.
-\bibitem{A4}
-Correggi, Michele, et al. \textit{Stability for a system of N fermions plus a different particle with zero-range interactions.} Reviews in Mathematical Physics 24.07 (2012): 1250017.
-\bibitem{B1}
-Minlos, R. A. \textit{On the point interaction of three particles.} Applications of Self-Adjoint Extensions in Quantum Physics. Springer Berlin Heidelberg, 1989. 138-145.
-\bibitem{B2}
-Minlos, Robert Adol'fovich. \textit{On point-like interaction between n fermions and another particle.} Mosc. Math. J 11.1 (2011): 113-127.
 \bibitem{B3}
 Minlos, Robert Adol'fovich. \textit{On pointlike interaction between three particles: two fermions and another particle.} ISRN Mathematical Physics 2012 (2012).
+\bibitem{zero-range-potentials}
+Demkov, Yu N., and Valentin Nikolaevich Ostrovskii. Zero-range potentials and their applications in atomic physics. Springer Science \& Business Media, 2013.
+\bibitem{solvable-models}
+Albeverio, Sergio, et al. Solvable models in quantum mechanics. Springer Science and Business Media, 2012.
 \end{thebibliography}
 
 \end{document}

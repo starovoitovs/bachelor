@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.4)  23 AUG 2016 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.4)  12 SEP 2016 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -109,13 +109,245 @@ Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2010/09/12 v5.6 Page Geometry
+(/usr/local/texlive/2016/texmf-dist/tex/latex/breqn/breqn.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2016/05/18 v6512 L3 programming layer (loader) 
 
+(/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2016/05/18 v6512 L3 programming layer (code)
+L3 Module: l3bootstrap 2016/02/12 v6412 L3 Bootstrap code
+L3 Module: l3names 2016/03/11 v6433 L3 Namespace for primitives
+L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
+L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
+L3 Module: l3tl 2016/03/26 v6465 L3 Token lists
+L3 Module: l3str 2016/03/24 v6441 L3 Strings
+L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
+L3 Module: l3int 2016/03/24 v6441 L3 Integers
+\c_max_int=\count99
+\l_tmpa_int=\count100
+\l_tmpb_int=\count101
+\g_tmpa_int=\count102
+\g_tmpb_int=\count103
+L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
+L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
+\g__prg_map_int=\count104
+L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
+L3 Module: l3token 2016/04/03 v6470 L3 Experimental token manipulation
+L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
+L3 Module: l3msg 2016/03/26 v6464 L3 Messages
+L3 Module: l3file 2016/03/25 v6458 L3 File and I/O operations
+\l_iow_line_count_int=\count105
+\l__iow_target_count_int=\count106
+\l__iow_current_line_int=\count107
+\l__iow_current_word_int=\count108
+\l__iow_current_indentation_int=\count109
+L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
+\c_zero_dim=\dimen112
+\c_max_dim=\dimen113
+\l_tmpa_dim=\dimen114
+\l_tmpb_dim=\dimen115
+\g_tmpa_dim=\dimen116
+\g_tmpb_dim=\dimen117
+\c_zero_skip=\skip49
+\c_max_skip=\skip50
+\l_tmpa_skip=\skip51
+\l_tmpb_skip=\skip52
+\g_tmpa_skip=\skip53
+\g_tmpb_skip=\skip54
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
+L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
+\g__keyval_level_int=\count110
+\l_keys_choice_int=\count111
+L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
+\c__fp_leading_shift_int=\count112
+\c__fp_middle_shift_int=\count113
+\c__fp_trailing_shift_int=\count114
+\c__fp_big_leading_shift_int=\count115
+\c__fp_big_middle_shift_int=\count116
+\c__fp_big_trailing_shift_int=\count117
+\c__fp_Bigg_leading_shift_int=\count118
+\c__fp_Bigg_middle_shift_int=\count119
+\c__fp_Bigg_trailing_shift_int=\count120
+L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
+\c_empty_box=\box28
+\l_tmpa_box=\box29
+\l_tmpb_box=\box30
+\g_tmpa_box=\box31
+\g_tmpb_box=\box32
+L3 Module: l3coffins 2016/05/17 v6508 L3 Coffin code layer
+\l__coffin_internal_box=\box33
+\l__coffin_internal_dim=\dimen118
+\l__coffin_offset_x_dim=\dimen119
+\l__coffin_offset_y_dim=\dimen120
+\l__coffin_x_dim=\dimen121
+\l__coffin_y_dim=\dimen122
+\l__coffin_x_prime_dim=\dimen123
+\l__coffin_y_prime_dim=\dimen124
+\c_empty_coffin=\box34
+\l__coffin_aligned_coffin=\box35
+\l__coffin_aligned_internal_coffin=\box36
+\l_tmpa_coffin=\box37
+\l_tmpb_coffin=\box38
+\l__coffin_display_coffin=\box39
+\l__coffin_display_coord_coffin=\box40
+\l__coffin_display_pole_coffin=\box41
+\l__coffin_display_offset_dim=\dimen125
+\l__coffin_display_x_dim=\dimen126
+\l__coffin_display_y_dim=\dimen127
+L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
+L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
+L3 Module: l3candidates 2016/05/13 v6484 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen128
+\l__box_bottom_dim=\dimen129
+\l__box_left_dim=\dimen130
+\l__box_right_dim=\dimen131
+\l__box_top_new_dim=\dimen132
+\l__box_bottom_new_dim=\dimen133
+\l__box_left_new_dim=\dimen134
+\l__box_right_new_dim=\dimen135
+\l__box_internal_box=\box42
+\l__coffin_bounding_shift_dim=\dimen136
+\l__coffin_left_corner_dim=\dimen137
+\l__coffin_right_corner_dim=\dimen138
+\l__coffin_bottom_corner_dim=\dimen139
+\l__coffin_top_corner_dim=\dimen140
+\l__coffin_scaled_total_height_dim=\dimen141
+\l__coffin_scaled_width_dim=\dimen142
+L3 Module: l3luatex 2016/03/26 v6465 L3 Experimental LuaTeX-specific functions
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count121
+\l__driver_tmp_box=\box43
+))
+Package: breqn 2015/08/11 v0.98d Breaking equations
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/breqn/flexisym.sty
+Package: flexisym 2015/08/11 v0.98d Make math characters macros
+LaTeX Info: Redefining \textprime on input line 299.
+LaTeX Info: Redefining \not on input line 357.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/breqn/cmbase.sym
+File: cmbase.sym 2007/12/19 v0.92
+LaTeX Info: Redefining \hbar on input line 324.
+LaTeX Info: Redefining \surd on input line 326.
+LaTeX Info: Redefining \angle on input line 334.
+LaTeX Info: Redefining \neq on input line 335.
+LaTeX Info: Redefining \mapsto on input line 336.
+LaTeX Info: Redefining \cong on input line 337.
+LaTeX Info: Redefining \notin on input line 340.
+LaTeX Info: Redefining \rightleftharpoons on input line 341.
+LaTeX Info: Redefining \doteq on input line 342.
+LaTeX Info: Redefining \hookrightarrow on input line 343.
+LaTeX Info: Redefining \hookleftarrow on input line 344.
+LaTeX Info: Redefining \bowtie on input line 345.
+LaTeX Info: Redefining \models on input line 346.
+LaTeX Info: Redefining \Longrightarrow on input line 347.
+LaTeX Info: Redefining \longrightarrow on input line 348.
+LaTeX Info: Redefining \Longleftarrow on input line 349.
+LaTeX Info: Redefining \longleftarrow on input line 350.
+LaTeX Info: Redefining \longmapsto on input line 351.
+LaTeX Info: Redefining \longleftrightarrow on input line 352.
+LaTeX Info: Redefining \Longleftrightarrow on input line 353.
+LaTeX Info: Redefining \cdots on input line 357.
+LaTeX Info: Redefining \vdots on input line 360.
+LaTeX Info: Redefining \ddots on input line 365.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/breqn/mathstyle.sty
+Package: mathstyle 2015/08/11 v0.98d Tracking mathstyle implicitly
+LaTeX Info: Redefining \displaystyle on input line 93.
+LaTeX Info: Redefining \textstyle on input line 95.
+LaTeX Info: Redefining \scriptstyle on input line 97.
+LaTeX Info: Redefining \scriptscriptstyle on input line 99.
+LaTeX Info: Redefining \genfrac on input line 145.
+))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count122
+\calc@Bcount=\count123
+\calc@Adimen=\dimen143
+\calc@Bdimen=\dimen144
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count124
+\calc@Cskip=\skip57
+)
+\inf@bad=\count125
+\maxint=\count126
+\listwidth=\dimen145
+\eqnumsep=\dimen146
+\eqmargin=\dimen147
+\eqlinespacing=\skip58
+\eqlineskip=\skip59
+\eqlineskiplimit=\dimen148
+\eqbinoffset=\muskip17
+\eqdelimoffset=\muskip18
+\eqindentstep=\dimen149
+\eqstyle=\toks26
+\eqbreakdepth=\count127
+\eqinterlinepenalty=\count128
+\intereqpenalty=\count129
+\intereqskip=\skip60
+\prerelpenalty=\count130
+\prebinoppenalty=\count131
+\Dmedmuskip=\muskip19
+\Dthickmuskip=\muskip20
+\eqleftskip=\skip61
+\eqrightskip=\skip62
+\eq@vspan=\skip63
+\eq@binoffset=\muskip21
+\EQ@box=\box44
+\EQ@copy=\box45
+\EQ@numbox=\box46
+\eq@wdNum=\dimen150
+\GRP@numbox=\box47
+\grp@wdNum=\dimen151
+\eq@lines=\count132
+\eq@curline=\count133
+\eq@badness=\count134
+\EQ@vims=\count135
+\eq@dp=\dimen152
+\eq@wdL=\dimen153
+\eq@wdT=\dimen154
+\eq@wdMin=\dimen155
+\grp@wdL=\dimen156
+\grp@wdR=\dimen157
+\grp@wdT=\dimen158
+\eq@wdRmax=\dimen159
+\eq@firstht=\dimen160
+\eq@wdCond=\dimen161
+\eq@indentstep=\dimen162
+\eq@linewidth=\dimen163
+\grp@linewidth=\dimen164
+\eq@hshift=\dimen165
+\eq@given@sidespace=\dimen166
+\mathindent=\dimen167
+\eq@final@linecount=\count136
+\eq@wdR=\dimen168
+\EQ@continue=\toks27
+\lr@level=\count137
+\GRP@queue=\toks28
+\GRP@box=\box48
+\GRP@wholebox=\box49
+\darraycolsep=\skip64
+\cur@row=\count138
+\cur@col=\count139
+\conditionsep=\skip65
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
@@ -126,18 +358,18 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count99
-\Gm@cntv=\count100
-\c@Gm@tempcnt=\count101
-\Gm@bindingoffset=\dimen112
-\Gm@wd@mp=\dimen113
-\Gm@odd@mp=\dimen114
-\Gm@even@mp=\dimen115
-\Gm@layoutwidth=\dimen116
-\Gm@layoutheight=\dimen117
-\Gm@layouthoffset=\dimen118
-\Gm@layoutvoffset=\dimen119
-\Gm@dimlist=\toks26
+\Gm@cnth=\count140
+\Gm@cntv=\count141
+\c@Gm@tempcnt=\count142
+\Gm@bindingoffset=\dimen169
+\Gm@wd@mp=\dimen170
+\Gm@odd@mp=\dimen171
+\Gm@even@mp=\dimen172
+\Gm@layoutwidth=\dimen173
+\Gm@layoutheight=\dimen174
+\Gm@layouthoffset=\dimen175
+\Gm@layoutvoffset=\dimen176
+\Gm@dimlist=\toks29
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2016/04/23 3.9r The Babel package
@@ -152,8 +384,8 @@ raphy)
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/04/23 3.9r Babel common definitions
-\babel@savecnt=\count102
-\U@D=\dimen120
+\babel@savecnt=\count143
+\U@D=\dimen177
 )
 \l@austrian = a dialect from \language\l@german 
 Package babel Info: Making " an active character on input line 110.
@@ -168,8 +400,8 @@ Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
 )))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks27
-\inpenc@posthook=\toks28
+\inpenc@prehook=\toks30
+\inpenc@posthook=\toks31
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
@@ -483,7 +715,7 @@ Now handling font encoding U ...
 (./BA_Titelseite.sty
 Package: BA_Titelseite 2010/04/25
 )
-\c@theorem=\count103
+\c@theorem=\count144
  (./bachelor.aux)
 \openout1 = `bachelor.aux'.
 
@@ -552,166 +784,133 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 
-Overfull \hbox (0.99779pt too wide) in paragraph at lines 61--62
-[]\OT1/cmr/m/n/10.95 @todo: po-si-ti-on, mo-men-tum, mass, re-la-ti-vi-stic ad-
-just-ments (Lor-entz trans-for-ma-ti-on), ener-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
 
 LaTeX Warning: Reference `eq:general-hamiltonian' on page 1 undefined on input 
-line 81.
+line 84.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
- []
-
-
-Overfull \hbox (6.69148pt too wide) in paragraph at lines 83--84
-[]\OT1/cmr/m/n/10.95 We are used to de-al with well-behaved boun-ded ope-ra-tor
-s (mea-ning $\OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 A\OMS/cmsy/m/n/10.95 k \O
-T1/cmr/m/n/10.95 = [][] \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 A \OMS/cmsy/m/
-n/10.95 k \OML/cmm/m/it/10.95 <
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 184.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 174.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 184.
- [3]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 224.
- [4]
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 174.
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+
+ []
+
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 208.
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 470--471
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--477
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 518--519
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 526--527
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+Underfull \hbox (badness 10000) in paragraph at lines 501--502
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 550--551
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 552--553
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 554--555
-
- []
-
-
-Overfull \hbox (8.43619pt too wide) in paragraph at lines 556--557
-[]\OT1/cmr/m/n/10.95 TMS Ha-mil-to-nians are qua-li-fied by two cha-rac-te-ri-s
-tics of ac-ting as the $\OML/cmm/m/it/10.95 N$\OT1/cmr/m/n/10.95 -body $\OML/cm
-m/m/it/10.95 d$\OT1/cmr/m/n/10.95 -dimensional
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
 
  []
 
@@ -720,27 +919,134 @@ Underfull \hbox (badness 10000) in paragraph at lines 565--566
 
  []
 
-[11] [12]
-Overfull \hbox (30.06825pt too wide) in paragraph at lines 654--655
-[]$[][] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 G [] g []$ \OT1/cmr/m/n/10.
-95 with $\OML/cmm/m/it/10.95 G [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 p[] 
-\OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 p[] \OT1/cmr/m/n/10.95 + [] []$ for $\
-OML/cmm/m/it/10.95 g \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 L[] []$
+
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
+
  []
 
-[13] (./bachelor.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--574
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 577--578
+
+ []
+
+
+Overfull \hbox (8.43619pt too wide) in paragraph at lines 579--580
+[]\OT1/cmr/m/n/10.95 TMS Ha-mil-to-nians are qua-li-fied by two cha-rac-te-ri-s
+tics of ac-ting as the $\OML/cmm/m/it/10.95 N$\OT1/cmr/m/n/10.95 -body $\OML/cm
+m/m/it/10.95 d$\OT1/cmr/m/n/10.95 -dimensional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 579--580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 588--589
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 666--667
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 680--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 686--687
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--728
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 753--754
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 765--766
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 780--781
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 808--809
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 814--815
+
+ []
+
+[17] (./bachelor.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 2673 strings out of 493014
- 32918 string characters out of 6133352
- 109652 words of memory out of 5000000
- 6177 multiletter control sequences out of 15000+600000
- 12078 words of font info for 46 fonts, out of 8000000 for 9000
+ 10087 strings out of 493014
+ 176321 string characters out of 6133352
+ 216860 words of memory out of 5000000
+ 13562 multiletter control sequences out of 15000+600000
+ 11685 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,10n,27p,987b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,40p,10436b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -755,11 +1061,12 @@ exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bachelor.pdf (15 pages, 245670 bytes).
+2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on bachelor.pdf (19 pages, 270603 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
